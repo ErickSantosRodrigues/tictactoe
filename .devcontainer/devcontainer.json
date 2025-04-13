@@ -1,6 +1,9 @@
 {
     "name": "C++ Dev Container",
     "image": "mcr.microsoft.com/devcontainers/cpp:latest",
+    "build": {
+                "dockerfile": "Dockerfile"
+                    },
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {},
         "ghcr.io/devcontainers/features/cmake:1": {},
@@ -15,6 +18,13 @@
             ]
         }
     },
+
+
+      "remoteUser": "developer",
+
+        "mounts": [
+                "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+                  ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
     "workspaceFolder": "/workspace",
     "runArgs": [
