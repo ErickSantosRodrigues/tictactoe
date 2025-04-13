@@ -16,7 +16,7 @@ private:
 
 public:
     TicTacToe() {
-        // Inicializar o tabuleiro e as variáveis do jogo
+                // Inicializar o tabuleiro e as variáveis do jogo
     }
 
     void display_board() {
